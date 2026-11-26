@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="index, follow">
+<meta name="description" content="FlipVPN terms of use: the service, access time, acceptable use, VPN limitations, liability and contact.">
+<title>Terms of use · FlipVPN</title>
+<style>
+:root {
+  --ink: #101828;
+  --muted: #475467;
+  --line: #d0d5dd;
+  --paper: #ffffff;
+  --soft: #f8fafc;
+  --accent: #0b5cff;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+header { padding-top: 40px; }
+.brand { font-weight: 700; letter-spacing: .02em; }
+h1 { font-size: 34px; line-height: 1.2; margin: 18px 0 8px; }
+h2 { font-size: 24px; line-height: 1.3; margin: 42px 0 12px; padding-top: 8px; border-top: 1px solid var(--line); }
+h3 { font-size: 18px; margin: 26px 0 8px; }
+p, li { color: var(--ink); }
+.meta { color: var(--muted); margin: 0 0 6px; }
+.lead { font-size: 18px; color: var(--muted); }
+nav.langs { margin: 18px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
+nav.langs label {
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px;
+  color: var(--ink); font-weight: 600; cursor: pointer; user-select: none;
+}
+.lang-radio {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+#lang-en:checked ~ main #russian,
+#lang-ru:checked ~ main #english { display: none; }
+#lang-en:checked ~ main .lang-sep,
+#lang-ru:checked ~ main .lang-sep { display: none; }
+#lang-en:checked ~ header label[for="lang-en"],
+#lang-ru:checked ~ header label[for="lang-ru"] {
+  background: var(--ink); border-color: var(--ink); color: #fff;
+}
+#lang-en:focus-visible ~ header label[for="lang-en"],
+#lang-ru:focus-visible ~ header label[for="lang-ru"] {
+  outline: 3px solid var(--accent); outline-offset: 2px;
+}
+.lang-ru-only { display: none; }
+#lang-ru:checked ~ header .lang-en-only { display: none; }
+#lang-ru:checked ~ header .lang-ru-only { display: inline; }
+a { color: var(--accent); }
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--line); }
+th { background: var(--soft); font-weight: 700; }
+code { font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--soft); padding: 2px 5px; border-radius: 4px; }
+.note { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+footer { margin-top: 56px; padding-top: 18px; padding-bottom: 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
+@media (max-width: 560px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 21px; }
+  th, td { padding: 8px; }
+}
+@media print {
+  nav.langs { display: none; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<input type="radio" name="policy-language" id="lang-en" class="lang-radio" checked>
+<input type="radio" name="policy-language" id="lang-ru" class="lang-radio">
+<header>
+  <div class="brand">FlipVPN</div>
+  <h1><span class="lang-en-only">Terms of use</span><span class="lang-ru-only" lang="ru">Условия использования</span></h1>
+  <p class="meta"><span class="lang-en-only">Version 1.0 · Effective 26 November 2026</span><span class="lang-ru-only" lang="ru">Версия 1.0 · Действует с 26 ноября 2026 года</span></p>
+  <p class="meta"><span class="lang-en-only">Operator: FlipDev, private individual, Russia · Contact: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></span><span class="lang-ru-only" lang="ru">Оператор: FlipDev, частное лицо, Россия · Контакты: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></span></p>
+  <nav class="langs" aria-label="Language">
+    <label for="lang-en" lang="en">English</label>
+    <label for="lang-ru" lang="ru">Русский</label>
+  </nav>
+</header>
+
+<main>
+<section id="english" lang="en">
+  <p class="lead">These terms govern your use of the FlipVPN application and the account service behind it. By installing or using FlipVPN, you accept them. If you do not accept them, do not use the app.</p>
+
+  <h2>1. Who we are and what these terms cover</h2>
+  <p>FlipVPN is an application for Android (package <code>ru.flipdev.flipvpn</code>), and may also be distributed for other platforms, built and operated by FlipDev, a private individual in Russia (“we”, “us”). These terms cover the application, the account and access service it talks to, and the pages that publish these terms. The processing of personal data is described separately in the <a href="index.html">Privacy policy</a>.</p>
+
+  <h2>2. The service</h2>
+  <p>FlipVPN creates an encrypted VPN connection between your device and a VPN server and manages access to that connection. The server list may include servers provided by the service and servers from third-party sources; you can also add your own connection sources.</p>
+  <p>We may change, suspend or discontinue any part of the service, including servers, protocols, limits and features. We do not guarantee that any particular server, location, protocol or website will be available, or that the connection will be uninterrupted or fast enough for your purpose. A VPN is not a guarantee of anonymity or of protection against every threat.</p>
+
+  <h2>3. Access time, advertisements and rewards</h2>
+  <p>Access may be granted for free through a welcome bonus, rewarded advertisements, promotions or grants, and Premium access may be granted by us. The app does not sell paid subscriptions and does not process payments. Access time and Premium have no cash value, cannot be exchanged for money, and may expire.</p>
+  <p>Rewarded advertisements are optional and depend on the advertising provider, your network and ad availability. Starting an advertisement does not guarantee that a reward will be credited if verification fails. We may change limits, pause rewards, or refuse and revoke access time in case of abuse, fraud or a breach of these terms.</p>
+
+  <h2>4. Acceptable use</h2>
+  <p>You must use FlipVPN lawfully and comply with the laws that apply to you and with the rules of the services you access. You must not:</p>
+  <ul>
+    <li>harm other people, distribute malware, send spam, commit fraud or infringe anyone’s rights;</li>
+    <li>attack, scan or overload networks, servers or services, or use FlipVPN to organize such activity;</li>
+    <li>resell, sublicense, share or redistribute access, credentials or connection profiles;</li>
+    <li>extract, copy or modify the app, bypass technical limits, or automate abuse of rewards;</li>
+    <li>use the service for content or activity that is illegal where you are.</li>
+  </ul>
+  <p>You are responsible for your device, its security, and the traffic you generate. Do not use the service where VPN use is prohibited.</p>
+
+  <h2>5. VPN limitations</h2>
+  <p>The tunnel encrypts traffic between your device and the selected VPN server. The server operator and its hosting provider necessarily process connection metadata to carry traffic, and the traffic leaves their network to its destination. Some servers are operated by third parties, not by us; their own terms and policies apply.</p>
+  <p>Websites and services may still identify you through your logins, cookies or other identifiers. Some networks block VPN traffic, and some services prohibit VPN use. You are responsible for complying with those rules. The app is not intended for emergency communications or for uses where a failure could cause harm.</p>
+
+  <h2>6. Privacy</h2>
+  <p>We process personal data as described in the <a href="index.html">Privacy policy</a>. By using the app you acknowledge that policy. You can request deletion of your installation data as described on the <a href="delete-data.html">Delete your data</a> page.</p>
+
+  <h2>7. Third-party services</h2>
+  <p>The app uses services provided by third parties, including Yandex Mobile Ads, Google Firebase, RuStore and hosting or VPN providers. Their terms and privacy policies apply to their part of the service. We are not responsible for third-party services we do not control.</p>
+
+  <h2>8. Intellectual property</h2>
+  <p>The application, its design, code, name and logo belong to FlipDev or its licensors. We grant you a limited, non-exclusive, non-transferable right to use the app for personal purposes under these terms. You must not copy, modify, translate, decompile or create derivative works except where the law allows it. Connection sources you add remain yours; you are responsible for having the right to use them.</p>
+
+  <h2>9. Availability, changes and termination</h2>
+  <p>We may update, suspend or stop the service, in whole or in part, and may suspend or terminate access if you breach these terms or use the service abusively. You may stop using the app at any time by uninstalling it. Provisions that by their nature should survive termination, including intellectual property, disclaimers and liability limits, survive.</p>
+
+  <h2>10. Disclaimer and limitation of liability</h2>
+  <p>To the extent permitted by law, the service is provided “as is” and “as available”, without warranties of merchantability, fitness for a particular purpose or non-infringement. We do not warrant that the service will be error-free, secure or available at any particular time.</p>
+  <p>To the extent permitted by law, we are not liable for indirect, incidental or consequential loss, loss of profit, data, access time or Premium, or for the actions of third-party services and VPN server operators. Nothing in these terms limits rights that cannot be limited by law, including consumer rights. If liability cannot be excluded, it is limited to the minimum amount the law allows.</p>
+
+  <h2>11. Governing law and disputes</h2>
+  <p>These terms are governed by the law of Russia, without regard to conflict-of-law rules. Before going to court, please contact us at <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> so that we can try to resolve the issue. Mandatory consumer protection rules remain in force.</p>
+
+  <h2>12. Changes to these terms</h2>
+  <p>We may update these terms when the service changes. The current version is always published on this page with its effective date. If you continue to use the app after an update, the new version applies.</p>
+
+  <h2>13. Contact</h2>
+  <p>Operator: FlipDev, private individual, Russia.<br>
+  E-mail: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.<br>
+  We answer questions about these terms in English and Russian.</p>
+  </section>
+
+<hr class="lang-sep">
+
+<section id="russian" lang="ru">
+  <p class="lead">Эти условия определяют использование приложения FlipVPN и сервиса аккаунта, который за ним стоит. Устанавливая или используя FlipVPN, вы их принимаете. Если вы не принимаете условия, не используйте приложение.</p>
+
+  <h2>1. Кто мы и на что распространяются условия</h2>
+  <p>FlipVPN — приложение для Android (пакет <code>ru.flipdev.flipvpn</code>), которое может распространяться и для других платформ; его разрабатывает и сопровождает FlipDev, частное лицо в России («мы»). Условия распространяются на приложение, сервис аккаунта и доступа, с которым оно обменивается данными, и на страницы, где опубликованы условия. Обработка персональных данных отдельно описана в <a href="index.html">Политике конфиденциальности</a>.</p>
+
+  <h2>2. Сервис</h2>
+  <p>FlipVPN создаёт зашифрованное VPN-подключение между вашим устройством и VPN-сервером и управляет доступом к этому подключению. Список серверов может включать серверы сервиса и серверы из сторонних источников; вы также можете добавлять свои источники подключения.</p>
+  <p>Мы можем менять, приостанавливать или прекращать любую часть сервиса, включая серверы, протоколы, лимиты и функции. Мы не гарантируем доступность конкретного сервера, страны, протокола или сайта, а также бесперебойность или достаточную скорость соединения. VPN не гарантирует анонимность и защиту от всех угроз.</p>
+
+  <h2>3. Время доступа, реклама и награды</h2>
+  <p>Доступ может предоставляться бесплатно: приветственным бонусом, рекламой с вознаграждением, акциями или начислениями; Premium может начисляться нами. Приложение не продаёт платные подписки и не обрабатывает платежи. Время доступа и Premium не имеют денежной стоимости, не обмениваются на деньги и могут истечь.</p>
+  <p>Реклама с вознаграждением необязательна и зависит от рекламного провайдера, вашей сети и наличия рекламы. Начало просмотра не гарантирует начисление, если проверка не подтвердила показ. Мы можем менять лимиты, приостанавливать награды, отказывать в доступе и отзывать время доступа при злоупотреблениях, мошенничестве или нарушении условий.</p>
+
+  <h2>4. Допустимое использование</h2>
+  <p>Вы обязаны использовать FlipVPN законно, соблюдать применимые к вам законы и правила сервисов, к которым вы получаете доступ. Запрещается:</p>
+  <ul>
+    <li>вредить другим людям, распространять вредоносные программы, рассылать спам, совершать мошенничество или нарушать чужие права;</li>
+    <li>атаковать, сканировать или перегружать сети, серверы и сервисы, а также использовать FlipVPN для такой деятельности;</li>
+    <li>перепродавать, передавать, публиковать или распространять доступ, учётные данные или профили подключения;</li>
+    <li>извлекать, копировать или изменять приложение, обходить технические ограничения, автоматизировать злоупотребление наградами;</li>
+    <li>использовать сервис для контента или деятельности, запрещённых там, где вы находитесь.</li>
+  </ul>
+  <p>Вы отвечаете за устройство, его безопасность и создаваемый вами трафик. Не используйте сервис там, где VPN запрещён.</p>
+
+  <h2>5. Ограничения VPN</h2>
+  <p>Туннель шифрует трафик между устройством и выбранным VPN-сервером. Оператор сервера и его хостинг-провайдер неизбежно обрабатывают метаданные подключения для передачи трафика, а трафик уходит из их сети к месту назначения. Часть серверов принадлежит третьим лицам, а не нам; к ним применяются их условия и правила.</p>
+  <p>Сайты и сервисы всё равно могут узнавать вас по логинам, cookie и другим идентификаторам. Некоторые сети блокируют VPN, а некоторые сервисы запрещают его использование. Вы отвечаете за соблюдение этих правил. Приложение не предназначено для экстренной связи и для случаев, когда сбой может причинить вред.</p>
+
+  <h2>6. Конфиденциальность</h2>
+  <p>Мы обрабатываем персональные данные так, как описано в <a href="index.html">Политике конфиденциальности</a>. Используя приложение, вы подтверждаете, что ознакомились с ней. Запросить удаление данных установки можно так, как описано на странице <a href="delete-data.html">Удаление данных</a>.</p>
+
+  <h2>7. Сторонние сервисы</h2>
+  <p>Приложение использует сервисы третьих лиц, включая Yandex Mobile Ads, Google Firebase, RuStore, а также хостинг-провайдеров и операторов VPN. К их части сервиса применяются их условия и политики конфиденциальности. Мы не отвечаем за сторонние сервисы, которыми не управляем.</p>
+
+  <h2>8. Интеллектуальная собственность</h2>
+  <p>Приложение, его дизайн, код, название и логотип принадлежат FlipDev или его лицензиарам. Мы предоставляем вам ограниченное, неисключительное, непередаваемое право использовать приложение в личных целях на этих условиях. Запрещается копировать, изменять, переводить, декомпилировать приложение и создавать производные произведения, кроме случаев, разрешённых законом. Добавленные вами источники подключения остаются вашими; вы отвечаете за право ими пользоваться.</p>
+
+  <h2>9. Доступность, изменения и прекращение</h2>
+  <p>Мы можем обновлять, приостанавливать или прекращать сервис полностью или частично, а также приостанавливать или прекращать доступ при нарушении этих условий или злоупотреблении сервисом. Вы можете прекратить использование в любой момент, удалив приложение. Положения, которые по своей природе должны сохраняться после прекращения (интеллектуальная собственность, отказ от гарантий, ограничение ответственности), сохраняются.</p>
+
+  <h2>10. Отказ от гарантий и ограничение ответственности</h2>
+  <p>В пределах, разрешённых законом, сервис предоставляется «как есть» и «как доступно», без гарантий коммерческой пригодности, пригодности для конкретной цели и ненарушения прав. Мы не гарантируем, что сервис будет работать без ошибок, безопасно и доступно в конкретное время.</p>
+  <p>В пределах, разрешённых законом, мы не отвечаем за косвенные, случайные и последующие убытки, упущенную выгоду, потерю данных, времени доступа или Premium, а также за действия сторонних сервисов и операторов VPN-серверов. Ничто в этих условиях не ограничивает права, которые нельзя ограничить законом, включая права потребителей. Если ответственность нельзя исключить, она ограничивается минимальной суммой, которую допускает закон.</p>
+
+  <h2>11. Применимое право и споры</h2>
+  <p>Условия регулируются правом России без учёта коллизионных норм. Перед обращением в суд напишите нам на <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>, чтобы мы попробовали решить вопрос. Обязательные правила защиты прав потребителей сохраняют силу.</p>
+
+  <h2>12. Изменения условий</h2>
+  <p>Мы можем обновлять условия, когда меняется сервис. Актуальная версия всегда опубликована на этой странице с датой вступления в силу. Если вы продолжаете пользоваться приложением после обновления, применяется новая версия.</p>
+
+  <h2>13. Контакты</h2>
+  <p>Оператор: FlipDev, частное лицо, Россия.<br>
+  E-mail: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.<br>
+  Мы отвечаем на вопросы об условиях на русском и английском языках.</p>
+  </section>
+</main>
+
+<footer>
+  <p>FlipVPN · Terms of use · Version 1.0 · Effective 26 November 2026</p>
+  <p><a href="index.html">Privacy policy</a> · <a href="delete-data.html">Delete your data</a> · <a href="terms.html">Terms of use</a></p>
+  <p>Operator: FlipDev, private individual, Russia · <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></p>
+</footer>
+</body>
+</html>

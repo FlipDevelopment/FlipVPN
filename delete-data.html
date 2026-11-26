@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="index, follow">
+<meta name="description" content="How to request deletion of the data linked to your FlipVPN installation, what is deleted and what is kept.">
+<title>Delete your data · FlipVPN</title>
+<style>
+:root {
+  --ink: #101828;
+  --muted: #475467;
+  --line: #d0d5dd;
+  --paper: #ffffff;
+  --soft: #f8fafc;
+  --accent: #0b5cff;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+header { padding-top: 40px; }
+.brand { font-weight: 700; letter-spacing: .02em; }
+h1 { font-size: 34px; line-height: 1.2; margin: 18px 0 8px; }
+h2 { font-size: 24px; line-height: 1.3; margin: 42px 0 12px; padding-top: 8px; border-top: 1px solid var(--line); }
+h3 { font-size: 18px; margin: 26px 0 8px; }
+p, li { color: var(--ink); }
+.meta { color: var(--muted); margin: 0 0 6px; }
+.lead { font-size: 18px; color: var(--muted); }
+nav.langs { margin: 18px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
+nav.langs label {
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px;
+  color: var(--ink); font-weight: 600; cursor: pointer; user-select: none;
+}
+.lang-radio {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+#lang-en:checked ~ main #russian,
+#lang-ru:checked ~ main #english { display: none; }
+#lang-en:checked ~ main .lang-sep,
+#lang-ru:checked ~ main .lang-sep { display: none; }
+#lang-en:checked ~ header label[for="lang-en"],
+#lang-ru:checked ~ header label[for="lang-ru"] {
+  background: var(--ink); border-color: var(--ink); color: #fff;
+}
+#lang-en:focus-visible ~ header label[for="lang-en"],
+#lang-ru:focus-visible ~ header label[for="lang-ru"] {
+  outline: 3px solid var(--accent); outline-offset: 2px;
+}
+.lang-ru-only { display: none; }
+#lang-ru:checked ~ header .lang-en-only { display: none; }
+#lang-ru:checked ~ header .lang-ru-only { display: inline; }
+a { color: var(--accent); }
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--line); }
+th { background: var(--soft); font-weight: 700; }
+code { font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--soft); padding: 2px 5px; border-radius: 4px; }
+.note { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+footer { margin-top: 56px; padding-top: 18px; padding-bottom: 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
+@media (max-width: 560px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 21px; }
+  th, td { padding: 8px; }
+}
+@media print {
+  nav.langs { display: none; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<input type="radio" name="policy-language" id="lang-en" class="lang-radio" checked>
+<input type="radio" name="policy-language" id="lang-ru" class="lang-radio">
+<header>
+  <div class="brand">FlipVPN</div>
+  <h1><span class="lang-en-only">Delete your data</span><span class="lang-ru-only" lang="ru">Удаление данных</span></h1>
+  <p class="meta"><span class="lang-en-only">Version 1.0 · Effective 26 November 2026</span><span class="lang-ru-only" lang="ru">Версия 1.0 · Действует с 26 ноября 2026 года</span></p>
+  <p class="meta"><span class="lang-en-only">Operator: FlipDev, private individual, Russia · Contact: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></span><span class="lang-ru-only" lang="ru">Оператор: FlipDev, частное лицо, Россия · Контакты: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></span></p>
+  <nav class="langs" aria-label="Language">
+    <label for="lang-en" lang="en">English</label>
+    <label for="lang-ru" lang="ru">Русский</label>
+  </nav>
+</header>
+
+<main>
+<section id="english" lang="en">
+  <p class="lead">You can ask us to delete the data linked to your FlipVPN installation. No account or password is needed to make the request.</p>
+
+  <h2>1. What deletion removes</h2>
+  <p>When we process your request, we delete the installation account and the data linked to it: the installation identifier, access and refresh tokens, push token, device-model record, advertising-reward records and the access history of that installation. The app’s local data is cleared when you clear the app storage or uninstall the app.</p>
+
+  <h2>2. What deletion does not remove</h2>
+  <p>Deletion does not remove records that third parties keep under their own policies, including Google (Firebase), Yandex (mobile ads), RuStore, e-mail providers and operators of third-party VPN servers. It also does not remove messages you sent to support, which are kept as long as needed to handle your request. Backups may keep deleted records until they are replaced on their normal rotation.</p>
+
+  <h2>3. How to request deletion</h2>
+  <p>Send an e-mail to <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> with the subject <strong>“FlipVPN data deletion request”</strong> and include:</p>
+  <ul>
+    <li>the approximate date you installed the app;</li>
+    <li>your device model and the app version (for example, from the About section);</li>
+    <li>if you signed in, the sign-in method and the provider account name.</li>
+  </ul>
+  <p>Do not send VPN keys, passwords, subscription links or payment card details. We may ask for information that lets us confirm the installation belongs to you, so that we do not delete data on someone else’s request.</p>
+
+  <h2>4. How long it takes</h2>
+  <p>We confirm receipt and process the request within the time required by applicable law; normally this takes no more than 30 days. If we need more information, we will ask for it. Deletion cannot be undone: the remaining access time and Premium are lost.</p>
+
+  <h2>5. Automatic deletion</h2>
+  <p>If you do not contact us, uninstalling the app stops processing from that device. An installation that has not been used for 14 days (not linked to an account) or 90 days (linked to an account) is deleted automatically together with its tokens, push token, reward records and installation-only history. An account with no installations left is deleted after 90 days without sign-in activity.</p>
+
+  <h2>6. Contact</h2>
+  <p>Operator: FlipDev, private individual, Russia.<br>
+  E-mail: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.<br>
+  We answer deletion questions in English and Russian.</p>
+  </section>
+
+<hr class="lang-sep">
+
+<section id="russian" lang="ru">
+  <p class="lead">Вы можете попросить удалить данные, связанные с вашей установкой FlipVPN. Для запроса не нужны аккаунт или пароль.</p>
+
+  <h2>1. Что удаляется</h2>
+  <p>Обрабатывая запрос, мы удаляем аккаунт установки и связанные с ним данные: идентификатор установки, токены доступа и обновления, push-токен, запись модели устройства, записи о вознаграждениях за рекламу и историю доступа этой установки. Локальные данные приложения очищаются, когда вы очищаете его хранилище или удаляете приложение.</p>
+
+  <h2>2. Что не удаляется</h2>
+  <p>Удаление не затрагивает записи, которые третьи лица хранят по своим правилам: Google (Firebase), Яндекс (мобильная реклама), RuStore, почтовые провайдеры и операторы сторонних VPN-серверов. Оно также не удаляет переписку с поддержкой — она хранится столько, сколько нужно для обработки обращения. Резервные копии могут сохранять удалённые записи, пока не будут заменены при обычной ротации.</p>
+
+  <h2>3. Как запросить удаление</h2>
+  <p>Отправьте письмо на <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> с темой <strong>«FlipVPN data deletion request»</strong> и укажите:</p>
+  <ul>
+    <li>примерную дату установки приложения;</li>
+    <li>модель устройства и версию приложения (например, из раздела «О приложении»);</li>
+    <li>если вы входили в аккаунт — способ входа и имя аккаунта провайдера.</li>
+  </ul>
+  <p>Не отправляйте VPN-ключи, пароли, ссылки на подписки и данные банковских карт. Мы можем попросить сведения, которые позволят убедиться, что установка принадлежит вам, чтобы не удалить данные по чужому запросу.</p>
+
+  <h2>4. Сколько это занимает</h2>
+  <p>Мы подтверждаем получение и обрабатываем запрос в срок, установленный применимым законом; обычно это не больше 30 дней. Если нужны дополнительные сведения, мы их запросим. Удаление необратимо: остаток времени доступа и Premium пропадают.</p>
+
+  <h2>5. Автоматическое удаление</h2>
+  <p>Если вы не обращаетесь к нам, удаление приложения прекращает обработку с этого устройства. Установка, которой не пользовались 14 дней (не привязана к аккаунту) или 90 дней (привязана к аккаунту), удаляется автоматически вместе с токенами, push-токеном, записями о наградах и историей только этой установки. Аккаунт, у которого не осталось установок, удаляется через 90 дней без активности входа.</p>
+
+  <h2>6. Контакты</h2>
+  <p>Оператор: FlipDev, частное лицо, Россия.<br>
+  E-mail: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.<br>
+  Мы отвечаем на вопросы об удалении на русском и английском языках.</p>
+  </section>
+</main>
+
+<footer>
+  <p>FlipVPN · Delete your data · Version 1.0 · Effective 26 November 2026</p>
+  <p><a href="index.html">Privacy policy</a> · <a href="delete-data.html">Delete your data</a> · <a href="terms.html">Terms of use</a></p>
+  <p>Operator: FlipDev, private individual, Russia · <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></p>
+</footer>
+</body>
+</html>

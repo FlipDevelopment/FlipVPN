@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="index, follow">
+<meta name="description" content="FlipVPN privacy policy: what the app processes, why, who receives it, how long it is kept and how to delete it.">
+<title>Privacy policy · FlipVPN</title>
+<style>
+:root {
+  --ink: #101828;
+  --muted: #475467;
+  --line: #d0d5dd;
+  --paper: #ffffff;
+  --soft: #f8fafc;
+  --accent: #0b5cff;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+header { padding-top: 40px; }
+.brand { font-weight: 700; letter-spacing: .02em; }
+h1 { font-size: 34px; line-height: 1.2; margin: 18px 0 8px; }
+h2 { font-size: 24px; line-height: 1.3; margin: 42px 0 12px; padding-top: 8px; border-top: 1px solid var(--line); }
+h3 { font-size: 18px; margin: 26px 0 8px; }
+p, li { color: var(--ink); }
+.meta { color: var(--muted); margin: 0 0 6px; }
+.lead { font-size: 18px; color: var(--muted); }
+nav.langs { margin: 18px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
+nav.langs label {
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px;
+  color: var(--ink); font-weight: 600; cursor: pointer; user-select: none;
+}
+.lang-radio {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+#lang-en:checked ~ main #russian,
+#lang-ru:checked ~ main #english { display: none; }
+#lang-en:checked ~ main .lang-sep,
+#lang-ru:checked ~ main .lang-sep { display: none; }
+#lang-en:checked ~ header label[for="lang-en"],
+#lang-ru:checked ~ header label[for="lang-ru"] {
+  background: var(--ink); border-color: var(--ink); color: #fff;
+}
+#lang-en:focus-visible ~ header label[for="lang-en"],
+#lang-ru:focus-visible ~ header label[for="lang-ru"] {
+  outline: 3px solid var(--accent); outline-offset: 2px;
+}
+.lang-ru-only { display: none; }
+#lang-ru:checked ~ header .lang-en-only { display: none; }
+#lang-ru:checked ~ header .lang-ru-only { display: inline; }
+a { color: var(--accent); }
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--line); }
+th { background: var(--soft); font-weight: 700; }
+code { font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--soft); padding: 2px 5px; border-radius: 4px; }
+.note { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+footer { margin-top: 56px; padding-top: 18px; padding-bottom: 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
+@media (max-width: 560px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 21px; }
+  th, td { padding: 8px; }
+}
+@media print {
+  nav.langs { display: none; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<input type="radio" name="policy-language" id="lang-en" class="lang-radio" checked>
+<input type="radio" name="policy-language" id="lang-ru" class="lang-radio">
+<header>
+  <div class="brand">FlipVPN</div>
+  <h1><span class="lang-en-only">Privacy policy</span><span class="lang-ru-only" lang="ru">Политика конфиденциальности</span></h1>
+  <p class="meta"><span class="lang-en-only">Version 1.0 · Effective 26 November 2026</span><span class="lang-ru-only" lang="ru">Версия 1.0 · Действует с 26 ноября 2026 года</span></p>
+  <p class="meta"><span class="lang-en-only">Operator: FlipDev, private individual, Russia · Contact: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></span><span class="lang-ru-only" lang="ru">Оператор: FlipDev, частное лицо, Россия · Контакты: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></span></p>
+  <nav class="langs" aria-label="Language">
+    <label for="lang-en" lang="en">English</label>
+    <label for="lang-ru" lang="ru">Русский</label>
+  </nav>
+</header>
+
+<main>
+<section id="english" lang="en">
+  <p class="lead">This policy explains what the FlipVPN application, our account service and this page process, why we process it, who receives it, how long we keep it and how you can delete it.</p>
+
+  <h2>1. Who we are and what this policy covers</h2>
+  <p>FlipVPN is an application for Android (package <code>ru.flipdev.flipvpn</code>) built and operated by FlipDev, a private individual in Russia (“we”, “us”). The same service may also be distributed for other platforms; this policy describes the service as a whole.</p>
+  <p>This policy covers:</p>
+  <ul>
+    <li>the FlipVPN application and the VPN connection it creates;</li>
+    <li>our account and access service, which the app talks to over HTTPS;</li>
+    <li>this page, which publishes this policy.</li>
+  </ul>
+  <p>It does not cover websites and apps you visit through the VPN, or VPN servers run by third parties. Their own policies apply to them.</p>
+  <p>Privacy questions and requests: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.</p>
+
+  <h2>2. Short version</h2>
+  <ul>
+    <li>You do not need a name, phone number or e-mail to start using FlipVPN. The app creates a random installation account.</li>
+    <li>We do not inspect or store the contents of the traffic that goes through the VPN tunnel. We do not build a browsing history.</li>
+    <li>We do process the data needed to provide and secure access: an installation identifier, access tokens, app and device details, session time, rewards and diagnostic reports.</li>
+    <li>We do not sell personal data. We share it only with the service providers listed below, and only as needed to run FlipVPN.</li>
+    <li>You can ask us to delete your installation data at any time by e-mail. Uninstalling the app also stops processing, and inactive installations are deleted automatically.</li>
+  </ul>
+
+  <h2>3. What we process</h2>
+
+  <h3>3.1 Installation account and access</h3>
+  <p>When the app first starts, it registers an installation with our account service. This does not require your name or e-mail. We process:</p>
+  <ul>
+    <li>a random installation identifier generated by the service;</li>
+    <li>long random access and refresh tokens, stored on the server and linked to the installation;</li>
+    <li>a request signature computed with the build key over the request URL and time, plus the package identifier, version and build sent as separate headers, which together let the service verify that a request comes from an unmodified FlipVPN build;</li>
+    <li>the device make and model, sent once on registration, for the “My devices” list;</li>
+    <li>app version and build number, platform and package identifier, sent with service requests;</li>
+    <li>registration and activity timestamps, connected session duration, remaining access time, Premium status and its expiry;</li>
+    <li>the welcome bonus, access-history records such as time grants, gifts, write-offs and Premium changes, and advertising-reward records;</li>
+    <li>an installation identifier in our advertising-reward records, together with a session or reward reference, so the same reward is not credited twice.</li>
+  </ul>
+  <p>We use this data to provide the service, count and limit access time, prevent duplicate rewards and abuse, keep sessions working across retries, and answer support requests.</p>
+
+  <h3>3.2 Optional sign-in</h3>
+  <p>You can optionally link the installation to an account through VK, Telegram, MAX or an e-mail code. If you do, we process the provider name, the provider account identifier and display name, the e-mail address you confirm, the linked sign-in methods and the account identifier, so that the same access is available on your other devices. Signing in is optional; the app works without it.</p>
+
+  <h3>3.3 Push notifications</h3>
+  <p>If push notifications are available, the app registers a push token with Google Firebase Cloud Messaging or RuStore Push and subscribes to service topics (platform, app version, build). We store that token and its type on our server and use it to deliver service notifications, including new service addresses when the current ones are blocked. You can disable notifications in Android settings; the token is then no longer used for delivery.</p>
+
+  <h3>3.4 Diagnostics and crash reports</h3>
+  <ul>
+    <li><strong>Crash reports.</strong> On Android the app sends crashes and non-fatal errors to Google Firebase Crashlytics; on iOS and desktop, where error reporting is enabled for the build, to our own error-reporting service (GlitchTip, Sentry protocol). A report can contain the stack trace, app version, device model, operating system version and technical diagnostic data collected at the moment of the error.</li>
+    <li><strong>VPN engine reports.</strong> If the VPN engine crashes, the app sends us a report containing a one-way hash of the connection key, the engine call phase, the evidence of the crash, the engine version, the crash time and, when captured, the engine error text.</li>
+    <li><strong>Service counters.</strong> At most once per sync interval, the app sends summarized counters: how many catalog accounts it holds, how many connected since the previous report, how many DNS, IPv6 and volume checks failed, how many service addresses answered correctly or returned a block page, and the index of the configuration source. These are counts and verdicts only. They contain no addresses, links or browsing data.</li>
+  </ul>
+  <p>We use diagnostics to find and fix defects, keep the service reachable on restricted networks and improve reliability. These reports are not used for advertising.</p>
+
+  <h3>3.5 Advertising</h3>
+  <p>Non-Premium users can watch an optional rewarded advertisement to add VPN time; the app also shows a banner. Advertisements are provided by <strong>Yandex Mobile Ads</strong>. To load and measure an ad and to prevent fraud, the advertising SDK may process your IP address, device identifiers, information about the ad request and interaction, and diagnostic data. The app does not request the Google advertising ID. Ad unit identifiers come from our server. When you finish a rewarded ad, the advertising provider returns a reward signal that we verify and record against the installation so the time is credited once. If you do not want personalized advertising, use the ad privacy settings of your device or of the advertising provider; you can still use the app without watching rewarded ads.</p>
+
+  <h3>3.6 The VPN connection and network data</h3>
+  <p>Android’s VPN permission lets FlipVPN route device traffic through the VPN server you selected. Traffic between your device and that server is encrypted by the VPN protocol. Our account service does not receive your browsing history, DNS queries made inside the tunnel, or the contents of the traffic.</p>
+  <p>VPN servers, their operators and hosting providers necessarily process connection metadata — such as source IP address, destination, ports, timestamps and volume — to carry traffic and protect the service. Some VPN servers in the catalog are operated by third parties, not by us; their own practices apply. We do not claim that independent providers keep no logs, and a VPN does not guarantee anonymity.</p>
+
+  <h3>3.7 Split tunneling and installed apps</h3>
+  <p>On Android, FlipVPN can decide which apps go through the tunnel and which go directly. To do that, the app reads the list of installed applications on the device, including package names and user identifiers. This list is processed locally to build routing rules and is <strong>not sent to us</strong>.</p>
+
+  <h3>3.8 What we do not collect</h3>
+  <p>FlipVPN does not request precise or approximate location, contacts, camera, microphone, SMS, call logs, calendar, health data or photos. The country shown for a server comes from the server configuration, not from your device’s location.</p>
+
+  <h3>3.9 Data stored on your device</h3>
+  <p>The app stores settings, the catalog cache, downloaded connection profiles, own sources, pending reward receipts and a limited local diagnostic history. Sensitive stored values are encrypted with a key derived from the app signing certificate. The connection profile must be decrypted in memory while the tunnel is running.</p>
+
+  <h3>3.10 This website</h3>
+  <p>This page is a static document. It sets no cookies, runs no analytics or advertising scripts and loads no third-party fonts or images. The web server and its hosting or delivery providers may process request metadata — IP address, requested path, time, user agent — to deliver the page and protect the server. If you write to the support e-mail, your e-mail provider and ours process the message.</p>
+
+  <h2>4. Why we process it and on what basis</h2>
+  <ul>
+    <li><strong>To provide the service</strong> — create and maintain the installation account, authorize requests, connect the tunnel, count access time, deliver rewards. Basis: performance of our terms with you.</li>
+    <li><strong>To keep the service secure and reliable</strong> — rate limits, abuse and fraud prevention, diagnostics, crash reports, counters. Basis: our legitimate interest in a working and secure service.</li>
+    <li><strong>To show advertisements</strong> — only where you choose to watch a rewarded ad or where a banner is shown. Basis: your consent where the law requires it, otherwise our legitimate interest in funding the free tier.</li>
+    <li><strong>To comply with the law</strong> — responding to lawful requests and keeping records where required.</li>
+  </ul>
+  <p>You can object to processing based on legitimate interest or withdraw consent at any time by contacting us; this does not affect processing that already happened.</p>
+
+  <h2>5. Who receives data</h2>
+  <table>
+    <thead>
+      <tr><th>Recipient</th><th>What it receives</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Our hosting and infrastructure providers</td><td>Service requests, IP addresses, technical logs</td><td>Run the account service, store its database, protect it from abuse</td></tr>
+      <tr><td>VPN server operators and their hosting providers</td><td>Connection metadata needed to carry traffic</td><td>Provide the VPN connection you selected</td></tr>
+      <tr><td>Google (Firebase Crashlytics, Firebase Cloud Messaging)</td><td>Crash and error reports, push token, device and app details</td><td>Crash diagnostics and push delivery</td></tr>
+      <tr><td>Our error-reporting service (GlitchTip, Sentry protocol)</td><td>Crash and error reports, device and app details from iOS and desktop builds where error reporting is enabled</td><td>Crash diagnostics outside Android</td></tr>
+      <tr><td>RuStore (push service)</td><td>Push token and topics</td><td>Push delivery where the app is installed from RuStore</td></tr>
+      <tr><td>Yandex (Yandex Mobile Ads)</td><td>IP address, device identifiers, ad interactions, diagnostics</td><td>Serve and measure advertisements and prevent ad fraud</td></tr>
+      <tr><td>E-mail providers</td><td>Messages you send to support and our replies</td><td>Answer your request</td></tr>
+      <tr><td>Authorities</td><td>Only what a lawful, valid request requires</td><td>Comply with the law</td></tr>
+    </tbody>
+  </table>
+  <p>We do not sell personal data and do not share it for cross-context behavioral advertising outside the advertising provider described above. Providers process data under their own terms and may process it in other countries.</p>
+
+  <h2>6. Retention</h2>
+  <ul>
+    <li>Installation, token, push-token, reward and access-history records are kept while the installation is active.</li>
+    <li>An installation that has not been used for <strong>14 days</strong> (not linked to an account) or <strong>90 days</strong> (linked to an account) is deleted together with its tokens, push token, reward records and installation-only history.</li>
+    <li>An account with no installations left is deleted after <strong>90 days</strong> without sign-in or sign-out activity.</li>
+    <li>Crash reports are retained by Firebase according to its retention settings; engine crash reports and service counters are kept only as long as needed to diagnose the service.</li>
+    <li>Support e-mail is kept as long as needed to handle the request and any follow-up.</li>
+    <li>Backups may retain deleted records until they are replaced on their normal rotation.</li>
+  </ul>
+
+  <h2>7. Security</h2>
+  <p>Service requests use HTTPS; service requests are signed by the build key so the server can tell an unmodified FlipVPN build from a modified one; sensitive stored values on the device are encrypted with a key derived from the app signing certificate; server access is limited to what the service needs. No method of transmission or storage is completely secure, and we cannot promise absolute security.</p>
+
+  <h2>8. Your choices and rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li>disconnect the VPN at any time and disable notifications in Android settings;</li>
+    <li>clear the app’s local data by clearing its storage or uninstalling it;</li>
+    <li>ask us for access to, correction of, or deletion of the data linked to your installation;</li>
+    <li>ask us to restrict or stop processing, or object to processing based on legitimate interest;</li>
+    <li>withdraw consent for advertising where consent is the basis;</li>
+    <li>complain to a data protection authority in your country.</li>
+  </ul>
+  <p>To exercise a right, e-mail <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> with the subject “FlipVPN privacy request”. Describe what you want and include the approximate date you installed the app, your device model, the app version and, if you signed in, the sign-in method. We may ask for information that lets us confirm the installation belongs to you. We answer within the time the applicable law requires.</p>
+
+  <h2>9. Deleting your data</h2>
+  <p>Send an e-mail to <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> with the subject “FlipVPN data deletion request”. Include the approximate installation date, device model, app version and, if you signed in, the provider and account name. We may ask for confirmation so that we do not delete data on someone else’s request.</p>
+  <p>Deletion removes the installation account, its tokens, push token, reward records and installation-only access history from the account service, and the app clears its access credentials when you clear its data or uninstall it. It does not delete records that Google, Yandex, RuStore, e-mail providers or third-party VPN operators keep under their own policies. Deletion cannot be undone, and remaining access time and Premium are lost.</p>
+  <p>If you do not contact us, uninstalling the app stops all processing from that device, and the installation is deleted automatically after the inactivity period in section 6.</p>
+
+  <h2>10. Children</h2>
+  <p>FlipVPN is not directed to children. Do not use it if you are below the minimum age required by the law of your country or by the app store you use (at least 13, and at least 16 in countries where that age applies). If you believe a child provided data to us, contact us and we will delete it.</p>
+
+  <h2>11. International transfers</h2>
+  <p>Our servers and providers may be located outside your country. Where required, we rely on appropriate safeguards for such transfers. Providers listed in section 5 process data in the countries where they operate.</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>We may update this policy when the service changes. The current version is always published on this page with its effective date. Material changes are also communicated in the app where appropriate. Continued use after an update means the new version applies.</p>
+
+  <h2>13. Contact</h2>
+  <p>Operator: FlipDev, private individual, Russia.<br>
+  E-mail: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.<br>
+  We answer privacy questions in English and Russian.</p>
+</section>
+
+<hr class="lang-sep">
+
+<section id="russian" lang="ru">
+  <p class="lead">В этой политике описано, какие данные обрабатывают приложение FlipVPN, наш сервис доступа и эта страница, зачем мы это делаем, кому передаём данные, сколько их храним и как вы можете их удалить.</p>
+
+  <h2>1. Кто мы и на что распространяется политика</h2>
+  <p>FlipVPN — приложение для Android (пакет <code>ru.flipdev.flipvpn</code>), которое разрабатывает и сопровождает FlipDev, частное лицо в России («мы»). Сервис может распространяться и для других платформ; политика описывает сервис в целом.</p>
+  <p>Политика распространяется на:</p>
+  <ul>
+    <li>приложение FlipVPN и создаваемое им VPN-подключение;</li>
+    <li>наш сервис аккаунта и доступа, с которым приложение обменивается данными по HTTPS;</li>
+    <li>эта страница, на которой опубликована политика.</li>
+  </ul>
+  <p>Она не распространяется на сайты и приложения, которые вы открываете через VPN, и на VPN-серверы третьих лиц: к ним применяются их собственные правила.</p>
+  <p>Вопросы и запросы о данных: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.</p>
+
+  <h2>2. Коротко</h2>
+  <ul>
+    <li>Для начала работы не нужны имя, телефон или e-mail. Приложение создаёт случайный аккаунт установки.</li>
+    <li>Мы не просматриваем и не храним содержимое трафика, который идёт через VPN-туннель, и не строим историю посещений.</li>
+    <li>Мы обрабатываем данные, необходимые для доступа и его защиты: идентификатор установки, токены доступа, сведения о приложении и устройстве, время сессий, награды и диагностические отчёты.</li>
+    <li>Мы не продаём персональные данные и передаём их только поставщикам из списка ниже и только для работы FlipVPN.</li>
+    <li>Вы можете в любой момент попросить удалить данные установки по e-mail. Удаление приложения тоже прекращает обработку, а неактивные установки удаляются автоматически.</li>
+  </ul>
+
+  <h2>3. Какие данные мы обрабатываем</h2>
+
+  <h3>3.1 Аккаунт установки и доступ</h3>
+  <p>При первом запуске приложение регистрирует установку в нашем сервисе аккаунта. Имя и e-mail для этого не требуются. Мы обрабатываем:</p>
+  <ul>
+    <li>случайный идентификатор установки, который создаёт сервис;</li>
+    <li>длинные случайные токен доступа и токен обновления, которые хранятся на сервере и привязаны к установке;</li>
+    <li>подпись запроса, вычисленную ключом сборки от адреса и времени запроса, а также идентификатор пакета, версию и сборку, которые отправляются отдельными заголовками: вместе они позволяют сервису проверить, что запрос отправлен неизменённой сборкой FlipVPN;</li>
+    <li>марку и модель устройства, которые приложение отправляет один раз при регистрации для списка «Мои устройства»;</li>
+    <li>версию и номер сборки приложения, платформу и идентификатор пакета, которые приложение отправляет с запросами к сервису;</li>
+    <li>время регистрации и активности, длительность подключённых сессий, остаток времени доступа, статус Premium и срок его действия;</li>
+    <li>приветственный бонус, записи истории доступа — начисления времени, подарки, списания и изменения Premium, — а также записи о вознаграждениях за рекламу;</li>
+    <li>идентификатор установки в записях о вознаграждениях вместе со ссылкой на сессию или награду, чтобы одна и та же награда не зачислялась дважды.</li>
+  </ul>
+  <p>Эти данные нужны, чтобы предоставлять сервис, считать и ограничивать время доступа, не зачислять награды повторно, защищаться от злоупотреблений, сохранять сессии при повторах запросов и отвечать на обращения в поддержку.</p>
+
+  <h3>3.2 Необязательный вход</h3>
+  <p>Установку можно дополнительно привязать к аккаунту через VK, Telegram, MAX или код на e-mail. В этом случае мы обрабатываем название провайдера, идентификатор и отображаемое имя аккаунта провайдера, подтверждённый адрес e-mail, привязанные способы входа и идентификатор аккаунта — чтобы доступ был на всех ваших устройствах. Вход не обязателен: приложение работает и без него.</p>
+
+  <h3>3.3 Push-уведомления</h3>
+  <p>Если push-уведомления доступны, приложение регистрирует push-токен в Google Firebase Cloud Messaging или RuStore Push и подписывается на служебные темы (платформа, версия приложения, сборка). Мы храним этот токен и его тип на сервере и используем для служебных уведомлений, в том числе для передачи новых адресов сервиса, когда текущие заблокированы. Уведомления можно отключить в настройках Android — тогда токен больше не используется для доставки.</p>
+
+  <h3>3.4 Диагностика и отчёты о сбоях</h3>
+  <ul>
+    <li><strong>Отчёты о сбоях.</strong> На Android приложение отправляет сбои и некритичные ошибки в Google Firebase Crashlytics, на iOS и desktop, если в сборке включены отчёты об ошибках, — в наш собственный сервис отчётов (GlitchTip, протокол Sentry). В отчёт могут попасть стек вызовов, версия приложения, модель устройства, версия операционной системы и технические диагностические данные, собранные в момент ошибки.</li>
+    <li><strong>Отчёты о сбоях VPN-ядра.</strong> При сбое VPN-ядра приложение отправляет нам отчёт: односторонний хеш ключа подключения, фазу вызова ядра, признак сбоя, версию ядра, время сбоя и, если он перехвачен, текст ошибки ядра.</li>
+    <li><strong>Счётчики сервиса.</strong> Не чаще одного интервала синхронизации приложение отправляет сводные счётчики: сколько учётных записей каталога есть на устройстве, сколько из них подключались с прошлого отчёта, сколько проверок DNS, IPv6 и объёма не прошли, сколько адресов сервиса ответили правильно или вернули страницу блокировки, а также номер источника конфигурации. Это только счётчики и признаки: адресов, ссылок и данных о посещениях в них нет.</li>
+  </ul>
+  <p>Диагностика нужна, чтобы находить и исправлять дефекты, поддерживать доступность сервиса в сетях с ограничениями и повышать надёжность. Для рекламы эти отчёты не используются.</p>
+
+  <h3>3.5 Реклама</h3>
+  <p>Пользователи без Premium могут посмотреть необязательную рекламу с вознаграждением, чтобы продлить время VPN; кроме того, приложение показывает баннер. Рекламу предоставляет <strong>Yandex Mobile Ads</strong>. Чтобы загрузить и измерить рекламу и предотвратить мошенничество, рекламный SDK может обрабатывать IP-адрес, идентификаторы устройства, сведения о рекламном запросе и взаимодействии с рекламой, а также диагностические данные. Приложение не запрашивает рекламный идентификатор Google. Идентификаторы рекламных блоков приходят с нашего сервера. Когда вы досматриваете рекламу с вознаграждением, провайдер возвращает сигнал о награде, мы его проверяем и записываем для установки, чтобы время зачислилось один раз. Если вы не хотите персонализированную рекламу, воспользуйтесь настройками рекламы на устройстве или у рекламного провайдера; приложением можно пользоваться и без просмотра рекламы за вознаграждение.</p>
+
+  <h3>3.6 VPN-подключение и сетевые данные</h3>
+  <p>Разрешение Android на VPN позволяет FlipVPN направлять трафик устройства через выбранный вами VPN-сервер. Трафик между устройством и этим сервером шифруется протоколом VPN. Наш сервис аккаунта не получает историю посещений, DNS-запросы внутри туннеля и содержимое трафика.</p>
+  <p>VPN-серверы, их операторы и хостинг-провайдеры неизбежно обрабатывают метаданные подключения — например, исходный IP-адрес, назначение, порты, время и объём — чтобы передавать трафик и защищать сервис. Часть VPN-серверов в каталоге принадлежит третьим лицам, а не нам; к ним применяются их собственные правила. Мы не утверждаем, что независимые провайдеры не ведут журналы, и VPN не гарантирует анонимность.</p>
+
+  <h3>3.7 Раздельное туннелирование и установленные приложения</h3>
+  <p>На Android FlipVPN может решать, какие приложения идут через туннель, а какие — напрямую. Для этого приложение читает список установленных приложений, включая имена пакетов и идентификаторы пользователей. Этот список обрабатывается локально для построения правил маршрутизации и <strong>не отправляется нам</strong>.</p>
+
+  <h3>3.8 Что мы не собираем</h3>
+  <p>FlipVPN не запрашивает точную или приблизительную геолокацию, контакты, камеру, микрофон, SMS, журнал вызовов, календарь, данные о здоровье и фотографии. Страна сервера берётся из его конфигурации, а не из местоположения устройства.</p>
+
+  <h3>3.9 Данные на устройстве</h3>
+  <p>Приложение хранит настройки, кеш каталога, скачанные профили подключения, свои источники, непринятые квитанции о наградах и ограниченную локальную историю диагностики. Чувствительные сохранённые значения шифруются ключом, производным от сертификата подписи приложения. Профиль подключения приходится расшифровывать в памяти, пока работает туннель.</p>
+
+  <h3>3.10 Этот сайт</h3>
+  <p>Эта страница — статический документ. Она не ставит cookie, не запускает аналитические и рекламные скрипты и не загружает сторонние шрифты и изображения. Веб-сервер и его хостинг- или CDN-провайдеры могут обрабатывать метаданные запроса — IP-адрес, запрошенный путь, время, user agent — чтобы отдать страницу и защитить сервер. Если вы пишете на почту поддержки, сообщение обрабатывают ваш и наш почтовые провайдеры.</p>
+
+  <h2>4. Зачем и на каком основании мы обрабатываем данные</h2>
+  <ul>
+    <li><strong>Чтобы предоставлять сервис</strong> — создавать и вести аккаунт установки, авторизовывать запросы, поднимать туннель, считать время доступа, зачислять награды. Основание: исполнение наших условий с вами.</li>
+    <li><strong>Чтобы сервис был безопасным и надёжным</strong> — ограничения частоты запросов, защита от злоупотреблений и мошенничества, диагностика, отчёты о сбоях, счётчики. Основание: наш законный интерес в работающем и защищённом сервисе.</li>
+    <li><strong>Чтобы показывать рекламу</strong> — только когда вы сами выбираете рекламу за вознаграждение или когда показывается баннер. Основание: ваше согласие, если этого требует закон, иначе наш законный интерес в финансировании бесплатного доступа.</li>
+    <li><strong>Чтобы соблюдать закон</strong> — отвечать на законные требования и вести записи, когда это обязательно.</li>
+  </ul>
+  <p>Вы можете возразить против обработки на основании законного интереса или отозвать согласие в любой момент, написав нам; это не затрагивает уже произошедшую обработку.</p>
+
+  <h2>5. Кому передаются данные</h2>
+  <table>
+    <thead>
+      <tr><th>Получатель</th><th>Что получает</th><th>Зачем</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Наши хостинг- и инфраструктурные провайдеры</td><td>Запросы к сервису, IP-адреса, технические журналы</td><td>Работа сервиса аккаунта, его базы данных и защита от злоупотреблений</td></tr>
+      <tr><td>Операторы VPN-серверов и их хостинг-провайдеры</td><td>Метаданные подключения, необходимые для передачи трафика</td><td>Обеспечение выбранного вами VPN-подключения</td></tr>
+      <tr><td>Google (Firebase Crashlytics, Firebase Cloud Messaging)</td><td>Отчёты о сбоях и ошибках, push-токен, сведения об устройстве и приложении</td><td>Диагностика сбоев и доставка push</td></tr>
+      <tr><td>Наш сервис отчётов об ошибках (GlitchTip, протокол Sentry)</td><td>Отчёты о сбоях и ошибках, сведения об устройстве и приложении с iOS и desktop, если в сборке включены отчёты</td><td>Диагностика сбоев вне Android</td></tr>
+      <tr><td>RuStore (push-сервис)</td><td>Push-токен и темы</td><td>Доставка push, если приложение установлено из RuStore</td></tr>
+      <tr><td>Яндекс (Yandex Mobile Ads)</td><td>IP-адрес, идентификаторы устройства, взаимодействие с рекламой, диагностика</td><td>Показ и измерение рекламы, защита от рекламного мошенничества</td></tr>
+      <tr><td>Почтовые провайдеры</td><td>Сообщения в поддержку и наши ответы</td><td>Ответ на ваше обращение</td></tr>
+      <tr><td>Государственные органы</td><td>Только то, что требует законный и действительный запрос</td><td>Соблюдение закона</td></tr>
+    </tbody>
+  </table>
+  <p>Мы не продаём персональные данные и не передаём их для поведенческой рекламы за пределами рекламного провайдера, указанного выше. Провайдеры обрабатывают данные по своим условиям и могут обрабатывать их в других странах.</p>
+
+  <h2>6. Сколько мы храним данные</h2>
+  <ul>
+    <li>Записи об установке, токены, push-токен, награды и история доступа хранятся, пока установка активна.</li>
+    <li>Установка, которой не пользовались <strong>14 дней</strong> (не привязана к аккаунту) или <strong>90 дней</strong> (привязана к аккаунту), удаляется вместе с токенами, push-токеном, записями о наградах и историей только этой установки.</li>
+    <li>Аккаунт, у которого не осталось установок, удаляется через <strong>90 дней</strong> без входа и выхода.</li>
+    <li>Отчёты о сбоях Firebase хранит по своим настройкам хранения; отчёты о сбоях ядра и счётчики сервиса хранятся столько, сколько нужно для диагностики сервиса.</li>
+    <li>Почта поддержки хранится столько, сколько нужно для обработки обращения и ответа на него.</li>
+    <li>Резервные копии могут сохранять удалённые записи, пока не будут заменены при обычной ротации.</li>
+  </ul>
+
+  <h2>7. Безопасность</h2>
+  <p>Запросы к сервису идут по HTTPS; запросы подписываются ключом сборки, чтобы сервер отличал неизменённую сборку FlipVPN от изменённой; чувствительные сохранённые значения на устройстве шифруются ключом, производным от сертификата подписи приложения; доступ к серверу ограничен тем, что нужно сервису. Ни один способ передачи и хранения не даёт полной гарантии безопасности, и мы не можем обещать абсолютную защиту.</p>
+
+  <h2>8. Ваши возможности и права</h2>
+  <p>Вы можете:</p>
+  <ul>
+    <li>в любой момент отключить VPN и выключить уведомления в настройках Android;</li>
+    <li>очистить локальные данные приложения через очистку хранилища или удаление приложения;</li>
+    <li>запросить доступ к данным, связанным с вашей установкой, их исправление или удаление;</li>
+    <li>попросить ограничить или прекратить обработку, возразить против обработки на основании законного интереса;</li>
+    <li>отозвать согласие на рекламу, если основанием было согласие;</li>
+    <li>пожаловаться в орган по защите данных в вашей стране.</li>
+  </ul>
+  <p>Чтобы воспользоваться правом, напишите на <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> с темой «FlipVPN privacy request». Опишите, что вы хотите, и укажите примерную дату установки приложения, модель устройства, версию приложения и, если вы входили, способ входа. Мы можем попросить сведения, которые позволят убедиться, что установка принадлежит вам. Мы отвечаем в срок, установленный применимым законом.</p>
+
+  <h2>9. Удаление данных</h2>
+  <p>Отправьте письмо на <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a> с темой «FlipVPN data deletion request». Укажите примерную дату установки, модель устройства, версию приложения и, если вы входили, провайдера и имя аккаунта. Мы можем попросить подтверждение, чтобы не удалить данные по чужому запросу.</p>
+  <p>Удаление убирает из сервиса аккаунта установку, её токены, push-токен, записи о наградах и историю доступа только этой установки; приложение очищает свои учётные данные, когда вы очищаете его данные или удаляете его. Оно не удаляет записи, которые Google, Яндекс, RuStore, почтовые провайдеры или операторы VPN-серверов третьих лиц хранят по своим правилам. Удаление необратимо: остаток времени доступа и Premium пропадают.</p>
+  <p>Если вы не обращаетесь к нам, удаление приложения прекращает обработку с этого устройства, а установка удаляется автоматически после периода неактивности из раздела 6.</p>
+
+  <h2>10. Дети</h2>
+  <p>FlipVPN не предназначен для детей. Не используйте его, если вы младше минимального возраста, установленного законом вашей страны или магазином приложений (не менее 13 лет, а в странах, где применяется этот возраст, — не менее 16 лет). Если вы считаете, что ребёнок передал нам данные, напишите нам, и мы их удалим.</p>
+
+  <h2>11. Международная передача</h2>
+  <p>Наши серверы и провайдеры могут находиться за пределами вашей страны. Где это требуется, мы используем надлежащие гарантии такой передачи. Провайдеры из раздела 5 обрабатывают данные в странах, где они работают.</p>
+
+  <h2>12. Изменения политики</h2>
+  <p>Мы можем обновлять политику, когда меняется сервис. Актуальная версия всегда опубликована на этой странице с датой вступления в силу. О существенных изменениях мы также сообщаем в приложении, где это уместно. Продолжение использования после обновления означает применение новой версии.</p>
+
+  <h2>13. Контакты</h2>
+  <p>Оператор: FlipDev, частное лицо, Россия.<br>
+  E-mail: <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a>.<br>
+  Мы отвечаем на вопросы о данных на русском и английском языках.</p>
+</section>
+</main>
+
+<footer>
+  <p>FlipVPN · Privacy policy · Version 1.0 · Effective 26 November 2026</p>
+  <p><a href="terms.html">Terms of use</a> · <a href="delete-data.html">Delete your data</a></p>
+  <p>Operator: FlipDev, private individual, Russia · <a href="mailto:notifications.ru.com@gmail.com">notifications.ru.com@gmail.com</a></p>
+</footer>
+</body>
+</html>
